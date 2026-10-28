@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "workspaces": [
+    "dabloo-portfolio"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=dabloo-portfolio",
+    "build": "npm run build --workspace=dabloo-portfolio",
+    "lint": "npm run lint --workspace=dabloo-portfolio",
+    "preview": "npm run preview --workspace=dabloo-portfolio"
+  },
+  "dependencies": {
+    "@react-three/drei": "^10.7.9",
+    "@react-three/fiber": "^9.8.2",
+    "lucide-react": "^1.62.0",
+    "motion": "^14.7.1",
+    "three": "^0.186.1"
+  }
+}

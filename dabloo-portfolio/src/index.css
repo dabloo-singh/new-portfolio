@@ -1,0 +1,115 @@
+:root {
+  font-family: "DM Sans", Arial, sans-serif;
+  color: #f5f5ff;
+  background: #070711;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  font-weight: 400;
+
+  --ink: #070711;
+  --panel: #111120;
+  --panel-raised: #171728;
+  --white: #f5f5ff;
+  --muted: #a4a4c0;
+  --subtle: #8290a5;
+  --blue: #9d4edd;
+  --cyan: #00d9ff;
+  --line: rgba(157, 78, 221, 0.22);
+  --glass: rgba(9, 6, 17, 0.78);
+  --headline: "Space Grotesk", "DM Sans", sans-serif;
+  --display: "Barlow Condensed", Impact, sans-serif;
+  --body: "DM Sans", Arial, sans-serif;
+
+  color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+  color: #151526;
+  background: #f5f7fc;
+  --ink: #f5f7fc;
+  --panel: #ffffff;
+  --panel-raised: #eef1f8;
+  --white: #151526;
+  --muted: #50546b;
+  --subtle: #646a7d;
+  --blue: #7336b5;
+  --cyan: #087caa;
+  --line: rgba(92, 63, 135, 0.2);
+  --glass: rgba(249, 250, 255, 0.86);
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+  scroll-padding-top: 86px;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  background:
+    radial-gradient(ellipse at 83% 18%, rgba(122, 39, 177, 0.15), transparent 34%),
+    radial-gradient(ellipse at 8% 68%, rgba(0, 217, 255, 0.055), transparent 31%),
+    var(--ink);
+  color: var(--white);
+  font-family: var(--body);
+  font-size: 14px;
+  letter-spacing: 0.005em;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+body,
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+a {
+  color: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 4px;
+}
+
+::selection {
+  color: #070711;
+  background: var(--cyan);
+}
+
+#root {
+  min-height: 100vh;
+  overflow: clip;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
